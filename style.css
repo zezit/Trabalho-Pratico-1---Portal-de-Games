@@ -1,0 +1,37 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+.nav,
+.container-fluid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.nav {
+    margin-left: 40%;
+    flex-wrap: nowrap;
+}
+
+.nav li {
+    margin: 0 2%;
+    padding-right: 2%;
+    border-right: 1px solid black;
+}
+
+.nav li:nth-child(4) {
+    border: none;
+}
+
+.destaques--container{
+    display: block;
+}
+
+.destaques--container div:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
