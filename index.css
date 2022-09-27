@@ -1,0 +1,17 @@
+* {
+    list-style: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right-align {
+    width: 60%;
+    background-color: aquamarine;
+}
+
+.menu-options {
+}
