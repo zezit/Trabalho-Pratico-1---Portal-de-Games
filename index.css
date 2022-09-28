@@ -1,17 +1,49 @@
+:root {
+    --main-bg-color-header: rgb(204, 204, 204);
+}
+
 * {
     list-style: none;
 }
 
-nav {
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 5px 20px 5px 20px;
+    background-color: var(--main-bg-color-header);
 }
 
-.right-align {
+.logo {
+    max-width: 10%;
+}
+
+.memu_area {
     width: 60%;
-    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.menu-options {
+nav input {
+    margin-left: 15px;
+    min-width: 350px;
+}
+
+nav a {
+    /* margin: 0 10px 0 10px; */
+    padding: 0 10px 0 10px;
+    border-right: 0.5px solid black;
+}
+
+.destaques--container {
+    width: 100%;
+    display: block;
+}
+
+.title-destaques h1{
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
