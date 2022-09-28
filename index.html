@@ -34,11 +34,19 @@
                 </nav>
             </div>
         </header>
+
         <main>
             <section class="destaques--container">
                 <div class="title-destaques"><h1>Destaques</h1></div>
-                <div>
-                    <div class="video">Video</div>
+                <div class="content">
+                    <div class="video">
+                        <iframe
+                            width="100%"
+                            height="100%"
+                            src="https://www.youtube.com/watch?v=tWFOtSn-5F4"
+                        >
+                        </iframe>
+                    </div>
                     <div class="game-detailes">
                         <h3>Nome do Jogo</h3>
                         <p class="sobre">
@@ -57,7 +65,7 @@
                             aliquet quam quis libero finibus, a mollis mi
                             scelerisque.
                         </p>
-                        <div>
+                        <div class="on-line">
                             <p>
                                 <strong>Publisher:</strong>
                                 Eletronic Arts
@@ -67,7 +75,50 @@
                                 May, 2020
                             </p>
                         </div>
+                        <p>
+                            <strong>Plataformas:</strong>
+                            Nitendo Switch, Playstation 5, Xbox One, Pc
+                        </p>
+
+                        <p>
+                            <strong>Gênero:</strong>
+                            Action, Adventure, RPG
+                        </p>
+                        <p>
+                            <strong>Avaliação:</strong>
+                            <strong class="avaliacao">92</strong>
+                        </p>
                     </div>
+                </div>
+                <div class="selection-destaques">
+                    <form action="#">
+                        <input
+                            type="radio"
+                            id="tela1"
+                            name="destaque-option"
+                            value="tela1"
+                        />
+                        <input
+                            type="radio"
+                            id="tela2"
+                            name="destaque-option"
+                            value="tela2"
+                        />
+
+                        <input
+                            type="radio"
+                            id="tela3"
+                            name="destaque-option"
+                            value="tela3"
+                        />
+
+                        <input
+                            type="radio"
+                            id="tela4"
+                            name="destaque-option"
+                            value="tela4"
+                        />
+                    </form>
                 </div>
             </section>
         </main>

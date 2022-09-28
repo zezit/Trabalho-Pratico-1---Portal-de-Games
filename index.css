@@ -6,6 +6,10 @@
     list-style: none;
 }
 
+body {
+    padding: 0 40px 0 40px;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -19,7 +23,7 @@ header {
 }
 
 .memu_area {
-    width: 60%;
+    width: 65%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -37,13 +41,47 @@ nav a {
 }
 
 .destaques--container {
+    background-color: aquamarine;
     width: 100%;
     display: block;
 }
 
-.title-destaques h1{
-    background-color: aqua;
+.title-destaques {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.content {
+    margin: 0 40px 0 40px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 20px;
+}
+
+.game-detailes {
+    max-width: 600px;
+}
+
+.on-line {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.avaliacao {
+    color: red;
+}
+
+.selection-destaques {
+    cursor: pointer;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.selection-destaques input {
+    cursor: pointer;
 }
