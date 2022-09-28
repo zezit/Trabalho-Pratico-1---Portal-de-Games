@@ -17,33 +17,333 @@
         <title>Portal de games</title>
     </head>
     <body>
-        <!-- <header> -->
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Logo</a>
-                </div>
-                <!-- <div class="align-right"> -->
-                <ul class="nav navbar-nav">
-                    <li><a href="#">destaques</a></li>
-                    <li><a href="#">lançamentos</a></li>
-                    <li><a href="#">plataformas</a></li>
-                    <li><a href="#">publishers</a></li>
-                </ul>
-                <form class="navbar-form" action="/action_page.php">
-                    <div class="">
-                        <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Pesquisar games"
-                        />
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid text-center">
+                <a href="#" class="navbar-brand col-lg-3 col-sm-12">
+                    <img
+                        class="img-fluid col-12 col-sm-4 col-md-10 col-lg-6"
+                        src="https://www.kadencewp.com/wp-content/uploads/2020/10/alogo-3.svg"
+                        alt="logo"
+                        id="logo"
+                    />
+                    <!-- LOGO -->
+                </a>
+                <div class="d-flex row w-auto col-lg-7" id="nav-links">
+                    <div class="links col-lg-6 col-sm-12">
+                        <a href="#" id="home-menu">destaques</a>
+                        <a href="#" id="home-menu">lançamentos</a>
+                        <a href="#" id="home-menu">plataformas</a>
+                        <a href="#" id="home-menu">publishers</a>
                     </div>
-                </form>
-                <!-- </div> -->
+                    <form class="d-flex col-lg-5 col-sm-12 input-group w-auto">
+                        <input
+                            type="search"
+                            class="form-control rounded input-search"
+                            placeholder="Pesquisar games"
+                            aria-label="Search"
+                            aria-describedby="search-addon"
+                        />
+                    </form>
+                </div>
             </div>
         </nav>
-        <main>
-            <section class="destaques--container">
+        <main class="container main">
+            <div class="row destaques">
+                <!--Carousel Wrapper-->
+                <div
+                    id="carousel-example-1z"
+                    class="carousel slide carousel-fade"
+                    data-ride="carousel"
+                >
+                    <!--Indicators-->
+                    <ol class="carousel-indicators">
+                        <li
+                            data-target="#carousel-example-1z"
+                            data-slide-to="0"
+                            class="active"
+                        ></li>
+                        <li
+                            data-target="#carousel-example-1z"
+                            data-slide-to="1"
+                        ></li>
+                        <li
+                            data-target="#carousel-example-1z"
+                            data-slide-to="2"
+                        ></li>
+                    </ol>
+                    <!--/.Indicators-->
+                    <!--Slides-->
+                    <div class="carousel-inner" role="listbox">
+                        <!--First slide-->
+                        <div
+                            class="atual carousel-item active d-flex row w-100"
+                        >
+                            <div class="destaque-inline w-100">
+                                <div class="image-carousel d-flex col-lg-6">
+                                    <img
+                                        class="w-100"
+                                        src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).webp"
+                                        alt="First slide"
+                                    />
+                                </div>
+                                <div class="col-lg-6">
+                                    <h3 class="">Nome do Jogo</h3>
+                                    <p class="sobre">
+                                        <strong>Sobre:</strong>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Phasellus et turpis ut
+                                        velit dapibus ultrices ac a purus.
+                                        Curabitur at cursus tellus. Pellentesque
+                                        semper fringilla hendrerit. Curabitur
+                                        rutrum sapien a maximus accumsan. Aenean
+                                        vitae turpis eros. Nulla ac semper
+                                        dolor, vitae feugiat ante. Aliquam erat
+                                        volutpat. Curabitur hendrerit eget
+                                        libero ac tincidunt. Ut eu ante leo.
+                                        Pellentesque finibus enim quis
+                                        scelerisque mollis. Praesent pharetra
+                                        dui non lorem luctus posuere. Phasellus
+                                        sit amet pharetra metus. Praesent
+                                        finibus finibus viverra. Praesent
+                                        aliquet quam quis libero finibus, a
+                                        mollis mi scelerisque.
+                                    </p>
+                                    <div>
+                                        <p>
+                                            <strong>Publisher:</strong>
+                                            Eletronic Arts
+                                        </p>
+                                        <p>
+                                            <strong>Lançamento:</strong>
+                                            May, 2020
+                                        </p>
+                                    </div>
+                                    <p>
+                                        <strong>Plataformas:</strong> Nitendo
+                                        Switch, Playstation 5, Xbox One, PC
+                                    </p>
+                                    <p>
+                                        <strong>Gênero:</strong> Action,
+                                        Adventure, RPG
+                                    </p>
+                                    <p><strong>Avaliação:</strong> 92</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/First slide-->
+                        <!--Second slide-->
+                        <div class="carousel-item">
+                            <div class="destaque-inline w-100">
+                                <div class="image-carousel d-flex col-lg-6">
+                                    <img
+                                        class="w-100"
+                                        src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).webp"
+                                        alt="First slide"
+                                    />
+                                </div>
+                                <div class="col-lg-6">
+                                    <h3 class="">Nome do Jogo</h3>
+                                    <p class="sobre">
+                                        <strong>Sobre:</strong>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Phasellus et turpis ut
+                                        velit dapibus ultrices ac a purus.
+                                        Curabitur at cursus tellus. Pellentesque
+                                        semper fringilla hendrerit. Curabitur
+                                        rutrum sapien a maximus accumsan. Aenean
+                                        vitae turpis eros. Nulla ac semper
+                                        dolor, vitae feugiat ante. Aliquam erat
+                                        volutpat. Curabitur hendrerit eget
+                                        libero ac tincidunt. Ut eu ante leo.
+                                        Pellentesque finibus enim quis
+                                        scelerisque mollis. Praesent pharetra
+                                        dui non lorem luctus posuere. Phasellus
+                                        sit amet pharetra metus. Praesent
+                                        finibus finibus viverra. Praesent
+                                        aliquet quam quis libero finibus, a
+                                        mollis mi scelerisque.
+                                    </p>
+                                    <div>
+                                        <p>
+                                            <strong>Publisher:</strong>
+                                            Eletronic Arts
+                                        </p>
+                                        <p>
+                                            <strong>Lançamento:</strong>
+                                            May, 2020
+                                        </p>
+                                    </div>
+                                    <p>
+                                        <strong>Plataformas:</strong> Nitendo
+                                        Switch, Playstation 5, Xbox One, PC
+                                    </p>
+                                    <p>
+                                        <strong>Gênero:</strong> Action,
+                                        Adventure, RPG
+                                    </p>
+                                    <p><strong>Avaliação:</strong> 92</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/Second slide-->
+                        <!--Third slide-->
+                        <div class="carousel-item">
+                            <div class="destaque-inline w-100">
+                                <div class="image-carousel d-flex col-lg-6">
+                                    <img
+                                        class="w-100"
+                                        src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).webp"
+                                        alt="First slide"
+                                    />
+                                </div>
+                                <div class="col-lg-6">
+                                    <h3 class="">Nome do Jogo</h3>
+                                    <p class="sobre">
+                                        <strong>Sobre:</strong>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Phasellus et turpis ut
+                                        velit dapibus ultrices ac a purus.
+                                        Curabitur at cursus tellus. Pellentesque
+                                        semper fringilla hendrerit. Curabitur
+                                        rutrum sapien a maximus accumsan. Aenean
+                                        vitae turpis eros. Nulla ac semper
+                                        dolor, vitae feugiat ante. Aliquam erat
+                                        volutpat. Curabitur hendrerit eget
+                                        libero ac tincidunt. Ut eu ante leo.
+                                        Pellentesque finibus enim quis
+                                        scelerisque mollis. Praesent pharetra
+                                        dui non lorem luctus posuere. Phasellus
+                                        sit amet pharetra metus. Praesent
+                                        finibus finibus viverra. Praesent
+                                        aliquet quam quis libero finibus, a
+                                        mollis mi scelerisque.
+                                    </p>
+                                    <div>
+                                        <p>
+                                            <strong>Publisher:</strong>
+                                            Eletronic Arts
+                                        </p>
+                                        <p>
+                                            <strong>Lançamento:</strong>
+                                            May, 2020
+                                        </p>
+                                    </div>
+                                    <p>
+                                        <strong>Plataformas:</strong> Nitendo
+                                        Switch, Playstation 5, Xbox One, PC
+                                    </p>
+                                    <p>
+                                        <strong>Gênero:</strong> Action,
+                                        Adventure, RPG
+                                    </p>
+                                    <p><strong>Avaliação:</strong> 92</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/Third slide-->
+                    </div>
+                    <!--/.Slides-->
+                </div>
+
+                <!--Card de anuncio-->
+                <!-- 
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                            <div class="card">
+                                <img
+                                    src="imagens/apt_01.jpg"
+                                    class="card-img-top"
+                                    alt="Apartamento 1"
+                                />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Apartamento 3 quartos
+                                    </h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on the
+                                        card title and make up the bulk of the
+                                        card's content.
+                                    </p>
+                                    <a href="#" class="btn btn-warning"
+                                        >Compar</a
+                                    >
+                                </div>
+                            </div>
+                        </div> -->
+                <!-- 
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                            <div class="card">
+                                <img
+                                    src="imagens/apt_02.jpg"
+                                    class="card-img-top"
+                                    alt="Apartamento 1"
+                                />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Apartamento 3 quartos
+                                    </h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on the
+                                        card title and make up the bulk of the
+                                        card's content.
+                                    </p>
+                                    <a href="#" class="btn btn-warning"
+                                        >Compar</a
+                                    >
+                                </div>
+                            </div>
+                        </div> -->
+                <!-- <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                            <div class="card">
+                                <img
+                                    src="imagens/apt_03.jpg"
+                                    class="card-img-top"
+                                    alt="Apartamento 1"
+                                />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Apartamento 3 quartos
+                                    </h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on the
+                                        card title and make up the bulk of the
+                                        card's content.
+                                    </p>
+                                    <a href="#" class="btn btn-warning"
+                                        >Compar</a
+                                    >
+                                </div>
+                            </div>
+                        </div> -->
+
+                <!-- <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                            <div class="card">
+                                <img
+                                    src="imagens/apt_04.jpg"
+                                    class="card-img-top"
+                                    alt="Apartamento 1"
+                                />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Apartamento 3 quartos
+                                    </h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on the
+                                        card title and make up the bulk of the
+                                        card's content.
+                                    </p>
+                                    <a href="#" class="btn btn-warning"
+                                        >Compar</a
+                                    >
+                                </div>
+                            </div>
+                        </div> -->
+                <!-- </div>
+                </div> -->
+            </div>
+        </main>
+        <!-- <main> -->
+        <!-- <section class="destaques--container">
                 <div><h1 class="title">Destaques</h1></div>
                 <div class="container row">
                     <div class="video col-6">Video</div>
@@ -83,8 +383,8 @@
                         <p><strong>Avaliação:</strong> 92</p>
                     </div>
                 </div>
-            </section>
-        </main>
+            </section> -->
+        <!-- </main> -->
 
         <!-- link boostrap scrip -->
         <script

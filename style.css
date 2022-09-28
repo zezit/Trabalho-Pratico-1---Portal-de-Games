@@ -3,35 +3,43 @@
     text-decoration: none;
     color: black;
 }
-.nav,
-.container-fluid {
+
+.links {
+    margin-right: 40px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     align-items: center;
+    justify-content: space-between;
 }
 
-.nav {
-    margin-left: 40%;
-    flex-wrap: nowrap;
+.links a {
+    border-right: 0.5px solid black;
+    padding: 0 10px;
 }
 
-.nav li {
-    margin: 0 2%;
-    padding-right: 2%;
-    border-right: 1px solid black;
-}
-
-.nav li:nth-child(4) {
+.links a:nth-child(4) {
     border: none;
 }
 
-.destaques--container{
-    display: block;
+.input-search {
+    margin-left: 20px;
 }
 
-.destaques--container div:nth-child(1){
+.destaque-inline {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+}
+
+.destaques {
+    background-color: rgb(192, 192, 192);
+}
+
+main {
+    width: 100%;
+}
+
+.image-carousel {
+    padding: 15px 0 0 10px;
+}
+
+.atual {
+    padding: 40px 10px;
 }
