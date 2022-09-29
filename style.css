@@ -1,0 +1,90 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    background-color: rgb(192, 162, 123);
+}
+
+.links {
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links a {
+    border-right: 0.5px solid black;
+    padding: 0 10px;
+}
+
+.links a:nth-child(4) {
+    border: none;
+}
+
+.input-search {
+    margin-left: 20px;
+}
+
+.destaque-inline {
+    display: flex;
+}
+
+.destaques {
+    background-color: rgb(192, 192, 192);
+    display: block;
+    padding: 20px 5px;
+}
+
+.destaques h1 {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    width: 100%;
+}
+
+.image-carousel {
+    padding: 15px 0 0 10px;
+}
+
+.atual {
+    /* padding: 40px 10px; */
+}
+
+.lancamentos {
+    display: block;
+    padding: 15px 50px;
+}
+
+.lancamentos-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carousel-indicators {
+    bottom: -40px;
+}
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+.line-lancamento {
+    /* margin: 40px 0; */
+}
+
+.card {
+    margin: 40px 0;
+}
+
+.plataformas {
+    margin-top: 30px;
+    padding: 15px 50px;
+}
