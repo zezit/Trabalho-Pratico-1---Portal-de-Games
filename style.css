@@ -4,6 +4,11 @@
   color: black;
 }
 
+nav,
+nav > div {
+  background-color: #f2f8f7;
+}
+
 .links {
   margin-right: 40px;
   display: flex;
@@ -110,10 +115,6 @@ main {
   /* list-style: none; */
   text-decoration: none;
   color: black;
-}
-
-nav {
-  background-color: rgb(192, 162, 123);
 }
 
 .links {

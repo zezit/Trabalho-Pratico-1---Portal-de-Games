@@ -18,12 +18,12 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar">
       <div class="container-fluid text-center">
         <a href="#" class="navbar-brand col-lg-3 col-sm-12">
           <img
-            class="img-fluid col-12 col-sm-4 col-md-10 col-lg-6"
-            src="https://www.kadencewp.com/wp-content/uploads/2020/10/alogo-3.svg"
+            class="img-fluid col-12 col-sm-4 col-md-4 col-lg-6"
+            src="./logo.png"
             alt="logo"
             id="logo"
           />
@@ -73,59 +73,20 @@
             <!--/.Indicators-->
 
             <!--Slides-->
-            <div class="carousel-inner" role="listbox">
-              <!--First slide-->
-              <div class="atual carousel-item active w-100">
-                <div class="destaque-inline w-100">
-                  <div class="image-carousel d-flex col-lg-6">
-                    <img
-                      class="w-100"
-                      src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).webp"
-                      alt="First slide"
-                    />
-                  </div>
-                  <div class="col-lg-6 col-sm-12">
-                    <h3 class="">Nome do Jogo</h3>
-                    <p class="sobre">
-                      <strong>Sobre:</strong>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Phasellus et turpis ut velit dapibus ultrices ac a purus.
-                      Curabitur at cursus tellus. Pellentesque semper fringilla
-                      hendrerit. Curabitur rutrum sapien a maximus accumsan.
-                      Aenean vitae turpis eros. Nulla ac semper dolor, vitae
-                      feugiat ante. Aliquam erat volutpat. Curabitur hendrerit
-                      eget libero ac tincidunt. Ut eu ante leo. Pellentesque
-                      finibus enim quis scelerisque mollis. Praesent pharetra
-                      dui non lorem luctus posuere. Phasellus sit amet pharetra
-                      metus. Praesent finibus finibus viverra. Praesent aliquet
-                      quam quis libero finibus, a mollis mi scelerisque.
-                    </p>
-                    <div class="inlinespans">
-                      <p>
-                        <span>
-                          <strong>Publisher:</strong>
-                          Eletronic Arts
-                        </span>
-                        <span>
-                          <strong>Lançamento:</strong>
-                          May, 2020
-                        </span>
-                      </p>
-                    </div>
-                    <p>
-                      <strong>Plataformas:</strong>
-                      Nitendo Switch, Playstation 5, Xbox One, PC
-                    </p>
-                    <p><strong>Gênero:</strong> Action, Adventure, RPG</p>
-                    <p class="destaque-av">
-                      <strong>Avaliação:</strong> <strong>92</strong>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!--/First slide-->
-              <!--Second slide-->
-              <div class="carousel-item">
+            <div
+              id="destaques-carroussel"
+              class="carousel-inner"
+              role="listbox"
+            >
+              <div id="todos-destaques" class="carousel-item">
+                <!--First slide-->
+                <div
+                  id="destatual"
+                  class="atual carousel-item active w-100"
+                ></div>
+                <!--/First slide-->
+
+                <!--Second slide-->
                 <div class="destaque-inline w-100">
                   <div class="image-carousel d-flex col-lg-6">
                     <img
@@ -337,7 +298,9 @@
                   <div class="embed-responsive embed-responsive-1by1">
                     <iframe
                       class="embed-responsive-item"
-                      src="https://www.youtube.com/watch?v=QNIvgnqA0I0&ab_channel=Liniker"
+                      src="https://www.youtube.com/embed/watch?v=QNIvgnqA0I0&ab_channel=Liniker"
+                      frameborder="0"
+                      allowfullscreen
                     ></iframe>
                   </div>
                 </div>
@@ -355,7 +318,9 @@
                   <div class="embed-responsive embed-responsive-1by1">
                     <iframe
                       class="embed-responsive-item"
-                      src="https://www.youtube.com/watch?v=QNIvgnqA0I0&ab_channel=Liniker"
+                      src="https://www.youtube.com/embed/watch?v=QNIvgnqA0I0&ab_channel=Liniker"
+                      frameborder="0"
+                      allowfullscreen
                     ></iframe>
                   </div>
                 </div>
@@ -373,7 +338,9 @@
                   <div class="embed-responsive embed-responsive-1by1">
                     <iframe
                       class="embed-responsive-item"
-                      src="https://www.youtube.com/watch?v=QNIvgnqA0I0&ab_channel=Liniker"
+                      src="https://www.youtube.com/embed/watch?v=QNIvgnqA0I0&ab_channel=Liniker"
+                      frameborder="0"
+                      allowfullscreen
                     ></iframe>
                   </div>
                 </div>
@@ -391,7 +358,9 @@
                   <div class="embed-responsive embed-responsive-1by1">
                     <iframe
                       class="embed-responsive-item"
-                      src="https://www.youtube.com/watch?v=QNIvgnqA0I0&ab_channel=Liniker"
+                      src="https://www.youtube.com/embed/watch?v=QNIvgnqA0I0&ab_channel=Liniker"
+                      frameborder="0"
+                      allowfullscreen
                     ></iframe>
                   </div>
                 </div>
@@ -411,7 +380,9 @@
                   <div class="embed-responsive embed-responsive-1by1">
                     <iframe
                       class="embed-responsive-item"
-                      src="https://www.youtube.com/watch?v=QNIvgnqA0I0&ab_channel=Liniker"
+                      src="https://www.youtube.com/embed/watch?v=QNIvgnqA0I0&ab_channel=Liniker"
+                      frameborder="0"
+                      allowfullscreen
                     ></iframe>
                   </div>
                 </div>
@@ -429,7 +400,9 @@
                   <div class="embed-responsive embed-responsive-1by1">
                     <iframe
                       class="embed-responsive-item"
-                      src="https://www.youtube.com/watch?v=QNIvgnqA0I0&ab_channel=Liniker"
+                      src="https://www.youtube.com/embed/watch?v=QNIvgnqA0I0&ab_channel=Liniker"
+                      frameborder="0"
+                      allowfullscreen
                     ></iframe>
                   </div>
                 </div>
@@ -447,7 +420,9 @@
                   <div class="embed-responsive embed-responsive-1by1">
                     <iframe
                       class="embed-responsive-item"
-                      src="https://www.youtube.com/watch?v=QNIvgnqA0I0&ab_channel=Liniker"
+                      src="https://www.youtube.com/embed/watch?v=QNIvgnqA0I0&ab_channel=Liniker"
+                      frameborder="0"
+                      allowfullscreen
                     ></iframe>
                   </div>
                 </div>
@@ -465,7 +440,9 @@
                   <div class="embed-responsive embed-responsive-1by1">
                     <iframe
                       class="embed-responsive-item"
-                      src="https://www.youtube.com/watch?v=QNIvgnqA0I0&ab_channel=Liniker"
+                      src="https://www.youtube.com/embed/watch?v=QNIvgnqA0I0&ab_channel=Liniker"
+                      frameborder="0"
+                      allowfullscreen
                     ></iframe>
                   </div>
                 </div>
@@ -863,17 +840,15 @@
       </div>
     </main>
 
-    <footer class="d-flex justify-content-between align-items-center flex-sm-column">
+    <footer
+      class="d-flex justify-content-between align-items-center flex-sm-column"
+    >
       <p class="">
         Copyright 2022 - Disciplina de Desenvolvimento de Interfaces Web -
         <strong>ICEI PUC Minas</strong>
       </p>
       <a href="#" class="image-foot">
-        <img
-          src="https://www.kadencewp.com/wp-content/uploads/2020/10/alogo-3.svg"
-          alt="logo"
-          id="logo"
-        />
+        <img src="./logo.png" alt="logo" id="logo" />
         <!-- LOGO -->
       </a>
     </footer>
@@ -897,5 +872,6 @@ Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
 wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>
