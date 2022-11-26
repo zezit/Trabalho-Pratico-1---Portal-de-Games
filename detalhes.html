@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title></title>
+
+    <!-- link boostrap stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https:stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container-fluid text-center">
+        <a href="index.html" class="navbar-brand col-lg-6 col-sm-12">
+          <img
+            class="img-fluid col-12 col-sm-4 col-md-4 col-lg-6"
+            src="./logo.png"
+            alt="logo"
+            id="logo"
+          />
+          <!-- LOGO -->
+        </a>
+        <div class="d-flex row w-auto col-lg-6 col-sm-12" id="nav-links">
+          <!-- <div class="links col-lg-6 col-sm-12">
+            <a href="#" id="home-menu">destaques</a>
+            <a href="#" id="home-menu">lançamentos</a>
+            <a href="#" id="home-menu">plataformas</a>
+            <a href="#" id="home-menu">publishers</a>
+          </div> -->
+          <form class="d-flex col-lg-12 col-sm-12 input-group w-auto">
+            <input
+              type="search"
+              class="form-control rounded input-search"
+              placeholder="Pesquisar games"
+              aria-label="Search"
+              aria-describedby="search-addon"
+            />
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <section class="container gamearea"></section>
+
+    <script src="detalhes.js"></script>
+  </body>
+</html>

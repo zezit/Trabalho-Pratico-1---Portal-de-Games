@@ -5,7 +5,7 @@ function init() {
   const allGames = document.getElementsByClassName("allplat")[0];
 
   fetch(
-    `https://api.rawg.io/api/games?key=${API_KEY}&dates=2022-09-01,2022-11-30`
+    `https://api.rawg.io/api/games?key=${API_KEY}&page=1&page_size=30`
   )
     .then((res) => res.json())
     .then((data) => {
@@ -18,6 +18,8 @@ function init() {
       gamesDet.forEach((row, i) => {
         const rowDiv = document.createElement("div");
         rowDiv.classList.add("row");
+        rowDiv.classList.add("allline");
+
         if (i == 0) rowDiv.classList.add("hidden-md-up");
 
         row.forEach((element) => {
@@ -25,21 +27,19 @@ function init() {
           gameDiv.classList.add("col-md-4");
 
           gameDiv.innerHTML = `
-              <div class="card">
-                <div class="card-block" style="min-height: 20rem">
-                <h4 class="card-title text-center">${element.name}</h4>
-                <h6 class="card-subtitle text-muted text-center">
-                Lançado: <span>${element.released}</span>
-                </h6>
-                <img class="img-thumbnail" src="${element.background_image}" alt="${element.slug}" />
-                <h6 class="card-subtitle text-muted text-center">
-                Avaliação: <span>${element.rating}</span>
-                </h6>
-                  <p class="text-right">
-                    <a href="#" class="card-link">Mais detalhes...</a>
-                  </p>
-                </div>
-              </div>
+          <div class="cardcontainer">
+          <div class="photo">
+              <img src="${element.background_image}">
+              <div class="photos">${element.rating}</div>
+          </div>
+          <div class="content">
+              <p class="txt4 text-center">${element.name}</p>
+              <p class="txt5 text-center">${element.released}</p>
+          </div>
+          <div class="footer">
+              <p><a class="btn btn-danger btn-rounded" href="detalhes.html?&id=${element.id}">Detalhes</a></p>
+          </div>
+      </div>
             `;
           rowDiv.appendChild(gameDiv);
         });
@@ -47,3 +47,15 @@ function init() {
       });
     });
 }
+
+const basicAutocomplete = document.querySelector('#search-autocomplete');
+const data = ['One', 'Two', 'Three', 'Four', 'Five'];
+const dataFilter = (value) => {
+  return data.filter((item) => {
+    return item.toLowerCase().startsWith(value.toLowerCase());
+  });
+};
+
+new mdb.Autocomplete(basicAutocomplete, {
+  filter: dataFilter
+});
