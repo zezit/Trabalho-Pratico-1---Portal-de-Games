@@ -46,64 +46,101 @@ function init() {
     });
 }
 
-var search_terms = [
-  "apple",
-  "apple watch",
-  "apple macbook",
-  "apple macbook pro",
-  "iphone",
-  "iphone 12",
-];
-
-function autocompleteMatch(input) {
-  if (input == "") {
-    return [];
-  }
-
-  fetch(
-    `https://api.rawg.io/api/games?key=${API_KEY}&page=1&page_size=30&search=${input}`
-  )
-    .then((res) => res.json())
-    .then((data) => {
-      var reg = new RegExp(input);
-      return data.results.filter((term) => {
-        if (term.name.match(reg) || term.slug.match(reg)) {
-          console.log(term.name);
-          return term.name;
-        }
-      });
-    });
-}
+let timeout = null;
 
 function showResults(val) {
-  res = document.getElementById("result");
-  res.innerHTML = "";
-  if (val == "") {
-    return;
-  }
-  let list = "";
-  fetch(
-    `https://api.rawg.io/api/games?key=${API_KEY}&page=1&page_size=30&search=${val}`
-  )
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      data.results.forEach((element, i) => {
-        var reg = new RegExp(val);
-        if (i > 9) {
-          return;
-        }
-        if (
-          element.name.toLocaleLowerCase().match(reg) ||
-          element.slug.toLocaleLowerCase().match(reg)
-        ) {
-          list += `<li><a href="detalhes.html?&id=${element.id}" id="${element.id}">${element.name}</a></li>`;
-          res.innerHTML = "<ul>" + list + "</ul>";
+  clearTimeout(timeout);
+  timeout = setTimeout(function () {
+    const allGames = document.getElementsByClassName("allplat")[0];
+
+    if (val == "") {
+      init();
+    }
+
+    fetch(
+      `https://api.rawg.io/api/games?key=${API_KEY}&search=${val}&page_size=60`
+    )
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        var gamesDet = [];
+        allGames.innerHTML = "";
+        if (!data.results.length) {
+          const gameDiv = document.createElement("div");
+
+          gameDiv.innerHTML = `
+          <div class="cardcontainer">
+            <h1>Nada foi encontrado</h1>
+          </div>`;
+
+          allGames.appendChild(gameDiv);
+        } else {
+          data.results.forEach((element, i) => {
+            var reg = new RegExp(val);
+            if (
+              element.name.toLocaleLowerCase().match(reg) ||
+              element.slug.toLocaleLowerCase().match(reg)
+            ) {
+              for (; i < data.results.length; i += 3) {
+                const chunk = data.results.slice(i, i + 3);
+                gamesDet.push(chunk);
+              }
+
+              gamesDet.forEach((row, i) => {
+                const rowDiv = document.createElement("div");
+                rowDiv.classList.add("row");
+                rowDiv.classList.add("allline");
+
+                if (i == 0) {
+                  rowDiv.classList.add("hidden-md-up");
+                  allGames.innerHTML = "";
+                }
+
+                row.forEach((element) => {
+                  const gameDiv = document.createElement("div");
+                  gameDiv.classList.add("col-md-4");
+                  gameDiv.id = element.id;
+
+                  gameDiv.innerHTML = `
+          <div class="cardcontainer">
+            <div class="photo">
+                <img src="${element.background_image ?? "https://artsmidnorthcoast.com/wp-content/uploads/2014/05/no-image-available-icon-6.png"}">
+                <div class="photos">${element.rating}</div>
+            </div>
+            <div class="content">
+                <p class="txt4 text-center">${element.name}</p>
+                <p class="txt5 text-center">${element.released}</p>
+            </div>
+            <div class="footer">
+                <p><a class="btn btn-danger btn-rounded" href="detalhes.html?&id=${element.id}">Detalhes</a></p>
+            </div>
+          </div>
+            `;
+                  let match = false;
+                  var arr = Array.prototype.slice.call(allGames.children);
+                  arr.forEach((rowA) => {
+                    var arrAux = Array.prototype.slice.call(rowA.children);
+                    arrAux.forEach((itenA) => {
+                      if (element.id == itenA.id) {
+                        match = true;
+                        return;
+                      }
+                    });
+                    if (match) {
+                      return;
+                    }
+                  });
+
+                  if (!match) rowDiv.appendChild(gameDiv);
+                });
+                allGames.appendChild(rowDiv);
+              });
+            }
+          });
         }
       });
-    });
-  res.innerHTML = "<ul>" + list + "</ul>";
+  }, 1000);
 }
 
 function loadContent() {
@@ -136,7 +173,7 @@ function loadContent() {
           <div class="col-md-12">
             <img
               class="card-img-top mb-5 mb-md-0"
-              src="${data.background_image}"
+              src="${data.background_image ?? "https://artsmidnorthcoast.com/wp-content/uploads/2014/05/no-image-available-icon-6.png"}"
               alt="..."
             />
           </div><br/>
