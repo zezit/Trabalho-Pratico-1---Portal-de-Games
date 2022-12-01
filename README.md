@@ -1,1 +1,4 @@
-# Trabalho-Pratico-1---Portal-de-Games
+# Trabalho Pratico 2
+
+## Nome: José Victor Mendes Dias
+## Curso: Engenharia de Software
